@@ -59,12 +59,22 @@ ServiceMaps:
           type: tasks
           id: $.clientReferenceId,$.projectBeneficiaryClientReferenceId,$.tenantId
           isBulk: true
-          jsonPath: $.*
+          jsonPath: $
+          customJsonMapping:
+            indexMapping: { "Data": {} }
+            fieldMapping:
+              - inJsonPath: $
+                outJsonPath: $.Data
           timeStampField: $.clientAuditDetails.lastModifiedTime
 
         - name: project-task-manual-delete-index-v1
           type: tasks
           id: $.clientReferenceId,$.projectBeneficiaryClientReferenceId,$.tenantId
           isBulk: true
-          jsonPath: $.*
+          jsonPath: $
+          customJsonMapping:
+            indexMapping: { "Data": {} }
+            fieldMapping:
+              - inJsonPath: $
+                outJsonPath: $.Data
           timeStampField: $.clientAuditDetails.lastModifiedTime
