@@ -7,7 +7,7 @@ ServiceMaps:
       indexes:
         - name: project-task-index-v1
           type: tasks
-          id: $.clientReferenceId,$.projectBeneficiaryClientReferenceId,$.tenantId
+          id: $.taskClientReferenceId,$.projectBeneficiaryClientReferenceId,$.tenantId
           isBulk: true
           jsonPath: $
           customJsonMapping:
@@ -57,7 +57,7 @@ ServiceMaps:
       indexes:
         - name: project-task-index-v1
           type: tasks
-          id: $.clientReferenceId,$.projectBeneficiaryClientReferenceId,$.tenantId
+          id: $.taskClientReferenceId,$.projectBeneficiaryClientReferenceId,$.tenantId
           isBulk: true
           jsonPath: $
           customJsonMapping:
@@ -69,7 +69,7 @@ ServiceMaps:
 
         - name: project-task-manual-delete-index-v1
           type: tasks
-          id: $.clientReferenceId,$.projectBeneficiaryClientReferenceId,$.tenantId
+          id: $.taskClientReferenceId,$.projectBeneficiaryClientReferenceId,$.tenantId
           isBulk: true
           jsonPath: $
           customJsonMapping:
